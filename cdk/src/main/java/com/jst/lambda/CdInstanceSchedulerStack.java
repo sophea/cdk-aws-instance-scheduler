@@ -227,33 +227,6 @@ public class CdInstanceSchedulerStack extends Stack {
 
                                         .build();
 
-//        Map<String, String> map = new HashMap<>();
-//        map.put("instance-id","$.detail.instance-id");
-//        map.put("state","$.detail.state");
-//        map.put("account","$.account");
-//        map.put("region","$.region");
-//        map.put("time","$.time");
-//
-//        Map<String, Object> transformationMap = new HashMap<>();
-//        transformationMap.put("InputPathsMap", map);
-//        transformationMap.put("InputTemplate", "At <time>, the status of your EC2 instance <instance-id> on account <account> in the AWS Region <region> has changed to <state>.");
-//
-//        Map<String, Object> transformInput = new HashMap<>();
-//        transformInput.put("InputTransformer", transformationMap);
-        //  transformationMap.put("InputTemplate", "{\"instance-id\":\"<instance-id>\",\"state\":\"<state>\",\"time\":\"<time>\",\"region\":\"<region>\",\"account\":\"<account>\",\n" +
-//            "\"message\":\n" +
-//            "\"At <time>, the status of your EC2 instance <instance-id> on account <account> in the AWS Region <region> has changed to <state>.\"\n" +
-//            "}");
-        //  RuleTargetInput targetInput =  RuleTargetInput.fromObject(transformInput);
-
-
-        //RuleTargetInput targetInput = RuleTargetInput.fromObject(" 'name': 'testing_at_' + aws_events.EventField.from_path('$.time')");
-        //json
-//        RuleTargetInput targetInput = RuleTargetInput
-//            .fromText("`The Pipeline '${EventField.fromPath('$.detail.pipeline')}' has ${EventField.fromPath(\n" +
-//                          "          '$.detail.state',\n" +
-//                          "        )}`");
-        // targetInput.bind(ec2ChangeRle).
 
         LambdaFunction lf = LambdaFunction.Builder.create(ec2ChangeStateLambda)
 //                                                  .event(targetInput)

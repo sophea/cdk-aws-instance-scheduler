@@ -16,12 +16,12 @@ patch_all()
 
 
 #Event:
-#{"instance-id": "i-093f3ea672017bc9d",
+#{"instance-id": "i-093fxxxxx72017bc9d",
 #"state": "stopping",
 #"time": "2021-04-13T08:42:33Z",
 #"region": "ap-southeast-1",
-#"account": "674352424895",
-# "message": "At 2021-04-13T08:42:33Z, the status of your EC2 instance i-093f3ea672017bc9d on account 674352424895 in the AWS Region ap-southeast-1 has changed to stopping."
+#"account": "6743xxxx895",
+# "message": "At 2021-04-13T08:42:33Z, the status of your EC2 instance i-09xxx17bc9d on account 6xxxxx895 in the AWS Region ap-southeast-1 has changed to stopping."
 # }
 
 

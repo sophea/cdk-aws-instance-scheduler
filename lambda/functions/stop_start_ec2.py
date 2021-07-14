@@ -58,14 +58,14 @@ def lambda_handler(event, context):
 #             "messageId": "2403aaf4-584b-447c-9562-e4271ef8f285",
 #             "body": "{   \"action\": \"start\", \"ids\" : [ \"i-1f\",\"i-2\"]}",
 #             "eventSource": "aws:sqs",
-#             "eventSourceARN": "arn:aws:sqs:ap-southeast-1:329003894857:sqs-test-queue",
+#             "eventSourceARN": "arn:aws:sqs:ap-southeast-1:329xxxx4857:sqs-test-queue",
 #             "awsRegion": "ap-southeast-1"
 #         },
 #         {
 #             "messageId": "2403aaf4-584b-447c-9562-e4271ef8f285",
 #             "body": "{   \"action\": \"stop\", \"ids\" : [ \"i-1f\",\"i-2\"]}",
 #             "eventSource": "aws:sqs",
-#             "eventSourceARN": "arn:aws:sqs:ap-southeast-1:329003894857:sqs-test-queue",
+#             "eventSourceARN": "arn:aws:sqs:ap-southeast-1:329xxxxx857:sqs-test-queue",
 #             "awsRegion": "ap-southeast-1"
 #         }
 #     ]
