@@ -2,6 +2,8 @@
 
 This is an CDK program written in Java to manage the EC2 instances scheduler with other AWS services. 
 
+![System design](system_design.png)
+
 # Technologies
 
 - Lambda function (java + python)

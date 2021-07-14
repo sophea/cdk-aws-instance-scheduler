@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jts.instance.scheduler</groupId>
-    <artifactId>instances-scheduer</artifactId>
+    <artifactId>cdk-aws-instance-scheduler</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
