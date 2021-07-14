@@ -1,0 +1,7 @@
+python build as layer
+
+- run layer.sh
+
+- zip package/python folder  as python_layer.zip
+
+- upload
