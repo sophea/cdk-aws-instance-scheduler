@@ -15,13 +15,20 @@ This is an CDK program written in Java to manage the EC2 instances scheduler wit
 - CDK Tool Kit
 - X-Ray
 
+# Requirements
+- [Java 8 runtime environment (SE JRE)](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Maven 3](https://maven.apache.org/docs/history.html)
+- The Bash shell. For Linux and macOS, this is included by default. In Windows 10, you can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to get a Windows-integrated version of Ubuntu and Bash.
+- [The AWS CLI v1](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
+
+
 # Micro-services as lambda function
-1 - instance-schedule java
-2 - stop-start-instance python
-3 - ec2-change-state python
+ - 1 - instance-schedule java
+ - 2 - stop-start-instance python
+ - 3 - ec2-change-state python
 
 ## set aws cli as local environment
-
+You need to install aws cli command 
 set up ~/.aws/credentails
 
 ````
