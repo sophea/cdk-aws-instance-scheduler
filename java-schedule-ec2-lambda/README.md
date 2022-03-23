@@ -102,6 +102,7 @@ To delete the application, run `5-cleanup.sh`.
 ````
 [
   {
+    "id":"1",
     "days": [
       "mon",
       "tue",
@@ -118,6 +119,7 @@ To delete the application, run `5-cleanup.sh`.
     ]
   },
   {
+    "id":"2",
     "allDays": true,
     "stopTime": "18:00",
     "startTime1": "08:00",

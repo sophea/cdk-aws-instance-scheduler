@@ -1,7 +1,10 @@
 package com.jst.lambda;
 
 import com.jst.lambda.model.EnvironmentData;
-import software.amazon.awscdk.core.*;
+import software.amazon.awscdk.core.Construct;
+import software.amazon.awscdk.core.Duration;
+import software.amazon.awscdk.core.RemovalPolicy;
+import software.amazon.awscdk.core.Stack;
 import software.amazon.awscdk.services.dynamodb.Attribute;
 import software.amazon.awscdk.services.dynamodb.AttributeType;
 import software.amazon.awscdk.services.dynamodb.Table;
@@ -10,7 +13,6 @@ import software.amazon.awscdk.services.events.EventPattern;
 import software.amazon.awscdk.services.events.Rule;
 import software.amazon.awscdk.services.events.Schedule;
 import software.amazon.awscdk.services.events.targets.LambdaFunction;
-import software.amazon.awscdk.services.events.targets.SqsQueue;
 import software.amazon.awscdk.services.iam.Effect;
 import software.amazon.awscdk.services.iam.IRole;
 import software.amazon.awscdk.services.iam.ManagedPolicy;
@@ -95,7 +97,7 @@ public class CdInstanceSchedulerStack extends Stack {
     public void buildLambdaInstanceSchedule(Queue sqs, EnvironmentData environmentData) {
         // Defines a new lambda resource with layer
         final Function javaScheduleLambda = Function.Builder.create(this, "InstanceScheduleEC2Lambda")
-                                                            .runtime(Runtime.JAVA_8)    // execution environment
+                                                            .runtime(Runtime.JAVA_11)    // execution environment
                                                             .code(Code.fromAsset("./../assets/ec2-lambda-java.jar"))  // code loaded from the "lambda" directory
                                                             .handler("com.jst.devops.lambda.EC2Instance::handleRequest")        // file is "index", function is "handler"
                                                             .timeout(Duration.seconds(TIMEOUT))
