@@ -94,6 +94,9 @@ public class CdInstanceSchedulerStack extends Stack {
                                                               .build();
         return layerVersion;
     }
+
+
+
     public void buildLambdaInstanceSchedule(Queue sqs, EnvironmentData environmentData) {
         // Defines a new lambda resource with layer
         final Function javaScheduleLambda = Function.Builder.create(this, "InstanceScheduleEC2Lambda")
@@ -104,7 +107,6 @@ public class CdInstanceSchedulerStack extends Stack {
                                                             .description("instance schedule EC2 lambda java")
                                                             .logRetention(RetentionDays.ONE_WEEK)
                                                             .memorySize(512)
-
                                                             .tracing(Tracing.ACTIVE)
                                                             .build();
 
@@ -112,6 +114,8 @@ public class CdInstanceSchedulerStack extends Stack {
         javaScheduleLambda.addEnvironment("QUEUE_NAME", sqs.getQueueName());
         javaScheduleLambda.addEnvironment("ENV", environmentData.name.toUpperCase()); //DEV, SIT, UAT, PROD
         javaScheduleLambda.addEnvironment("TABLE_NAME", TABLE_NAME);
+        javaScheduleLambda.addEnvironment("JAVA_TOOL_OPTIONS", "-XX:+TieredCompilation -XX:TieredStopAtLevel=1");
+
         //add layer
         final LayerVersion javaLayer = LayerVersion.Builder.create(this, "ec2-lambda-java-lib-mvn")
                                                            .layerVersionName("ec2-lambda-java-lib-mvn")

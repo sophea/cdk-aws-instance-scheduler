@@ -1,6 +1,6 @@
 # Introduction
 
-This is an CDK program written in Java to manage the EC2 instances scheduler with other AWS services. 
+This is an CDK Tool written in Java to manage the EC2 instances scheduler with other AWS services. 
 
 ![System design](system_design.png)
 
@@ -16,10 +16,10 @@ This is an CDK program written in Java to manage the EC2 instances scheduler wit
 - X-Ray
 
 # Requirements
-- [Java 8 runtime environment (SE JRE)](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Java 11 runtime environment (SE JRE)](https://www.oracle.com/java/technologies/javase-downloads.html)
 - [Maven 3](https://maven.apache.org/docs/history.html)
 - The Bash shell. For Linux and macOS, this is included by default. In Windows 10, you can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to get a Windows-integrated version of Ubuntu and Bash.
-- [The AWS CLI v1](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
+- [The AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
 
 
 # Micro-services as lambda function
